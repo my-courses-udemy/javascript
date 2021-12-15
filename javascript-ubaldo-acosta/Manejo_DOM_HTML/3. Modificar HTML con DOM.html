@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar HTML con DOM</title>
+</head>
+<body>
+    <h1 id="titulo" class="blue">Modificar HTML con DOM</h1>
+
+    <button onclick="cambiar()">Cambiar Titulo</button>
+    <hr>
+
+    <img id="imagen" src="pexels-dorran-1643280 (copy).jpg" alt="imagen distorsionada" width="500" height="500">
+    <!-- <img src="pexels-maurício-mascaro-376533.jpg" alt="imagen distorsionada" width="500" height="500"> -->
+
+    <script>
+        
+        const cambiar = () => {
+            // document.getElementById('titulo').innerHTML = 'Titulo cambiado con el boton'
+            document.getElementById('titulo').style.backgroundColor = 'blue';
+            document.getElementById('imagen').src = 'pexels-maurício-mascaro-376533.jpg';
+        }
+    </script>
+</body>
+</html>

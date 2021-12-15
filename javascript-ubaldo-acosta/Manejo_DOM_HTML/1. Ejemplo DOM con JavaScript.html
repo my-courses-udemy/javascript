@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo DOM con JavaScript</title>
+    <link rel="stylesheet" href="1. styles.css">
+</head>
+<body>
+    <h1 id="cabecera" class="azul">Ejemplo DOM con JavaScript aaa</h1>
+
+    <p id="parrafo" class="azul">Saludos des de el parrafo</p>
+    <p id="parrafo">Soy el parrafo 2</p>
+    <p id="parrafo" class="azul">Soy un parrafo color azul</p>
+
+    <script>
+        // inner html recupera el texto
+        let cabecera = document.getElementById('cabecera');
+        let textoCabecera = cabecera.innerHTML;
+        console.log(textoCabecera);
+        
+        let parrafo = document.getElementById('parrafo');
+        let textoParrafo = parrafo.innerHTML;
+        console.log(textoParrafo);
+        
+        // MODIFICAR EL VALOR DE LAS ETIQUETAS
+        cabecera.innerHTML = 'Cambio de cabecero'
+        parrafo.innerHTML = "Nuevo valor de mi parrafo";
+
+        // SELECCIONAR TODAS LAS ETIQUETAS DEL MISMO TIPO
+        let parrafos = document.getElementsByTagName('p');
+        console.log(parrafos.length)
+        // seleccionamos un valor
+        console.log(parrafos.item(1).innerHTML)
+        
+        // SELECCIONAR ELEMENTOS POR SU CLASE, SELECCIONA TODOS LOS ELEMENTOS SEA <p>, <h1>, wrx
+        let elementosAzules = document.getElementsByClassName('azul')
+        console.log(elementosAzules.length)
+        console.log(elementosAzules.item(0).innerHTML)
+
+        // TAMBIEN PODEMOS USAR QUERYSELECTORALL
+        // especificamos la clase
+        let querysAzules = document.querySelectorAll('p.azul');
+        querysAzules.forEach( dato => console.log(dato.innerHTML))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="5. styles.css">
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form action="#" method="POST" class="form" id="form">
+        <div class="form-field">
+            <label for="name" class="form_label">Name:</label>
+            <input type="text" id="name" name="name" autocomplete="off">
+        </div>
+        <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" autocomplete="off">
+        </div>
+        <div id="gender" class="form-field">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="male">
+            <label for="male">Female</label>
+            <input type="radio" name="gender" value="female">
+        </div>
+        <div class="form-field">
+            <label for="terms">I accept the terms and conditions</label>
+            <input type="checkbox" name="terms" id="terms">
+        </div>
+        <button type="submit" id="submitButton" disabled>
+            Send
+        </button>
+    </form>
+
+    <script src="5. script.js"></script>
+</body>
+</html>

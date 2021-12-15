@@ -1,0 +1,16 @@
+
+
+.load-bar{
+    width: 50%;
+    background-color: #cccccc;
+    height: 10px;
+    position: relative;
+    margin: 1rem 0;
+}
+
+.progress{
+    display: block;
+    background-color: blue;
+    height: 10px;
+    width: 0%;
+}
